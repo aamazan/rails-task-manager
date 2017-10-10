@@ -3,3 +3,18 @@
 <!-- new.html.erb and edit.html.erb
 
     Should include a form to create or update a task. -->
+<!-- <form action="/tasks" type="post">
+  <label for="name">Name:</label>
+  <input type="text" name="task[name]">
+  <label for="description">Description:</label>
+  <input type="text" name="task[description]">
+
+  <input type="submit" value="Submit">
+</form> -->
+<%= form_for @task do |f| %>
+  <%= f.label :name, "Name:" %>
+  <%= f.text_field :name %>
+  <%= f.label :description, "Description:" %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
